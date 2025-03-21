@@ -1,0 +1,41 @@
+identify_plan_of_action:
+  description: >-
+    Identify the problem being presented and come up with steps to solve it. Restate
+    the problem in your own words, and identify 3 to 12 steps you can take to explore
+    possible solutions. Do not actually present solutions to the problem yourself,
+    but pass it to a new agent to do so.
+  expected_output: >-
+    A detailed description of the problem being presented and a list of possible steps
+    that can be taken to explore possible solutions.
+  agent: >-
+    triage
+find_solution:
+  description: >-
+    Identify the problem being presented to you and come up with the best solution
+    you can think of. After you have come up with a solution, pass it to a new agent
+    to check it.
+  expected_output: >-
+    A concise, complete solution to the problem being presented.
+  agent: >-
+    worker
+check_solution:
+  description: >-
+    Review the problem and solution being presented and determine wether you think
+    it is correct or not.
+  expected_output: >-
+    Reiterate the solution to be factually correct.
+  agent: >-
+    fact_checker
+generate_script_concepts:
+  description: >-
+    Analyze the creator's MongoDB data to identify top-performing content patterns.
+    Retrieve and analyze screenshots from their highest-performing TikTok videos to understand 
+    their visual style. Based on this analysis and the product requirements, generate 3-5 
+    customized video script concepts that align with the creator's style while effectively 
+    showcasing the product.
+  expected_output: >-
+    A set of 3-5 detailed script concepts with hooks, shot-by-shot breakdowns, text overlay 
+    recommendations, and caption strategies, all tailored to the creator's style and optimized 
+    for TikTok performance.
+  agent: >-
+    script_generator
